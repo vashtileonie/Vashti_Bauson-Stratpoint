@@ -1,6 +1,7 @@
-package org.stratpoint.project2.vbauson.service.Impl;
-import org.stratpoint.project2.vbauson.model.EBook;
-import org.stratpoint.project2.vbauson.service.DigitalLibraryService;
+package com.vashtibauson.library.service.Impl;
+import com.vashtibauson.library.exception.DuplicateISBNException;
+import com.vashtibauson.library.model.EBook;
+import com.vashtibauson.library.service.DigitalLibraryService;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -10,7 +11,12 @@ public class DigitalLibraryServiceImpl implements DigitalLibraryService {
     List<EBook> eBookList = new ArrayList<EBook>();
 
 
-    public void addEBook(EBook eBook) {
+    public void addEBook(EBook eBook) throws DuplicateISBNException {
+        for (EBook existingEBook : eBookList) {
+            if (existingEBook.getIsbn() == eBook.getIsbn()) {
+                throw new DuplicateISBNException("ISBN " + eBook.getIsbn() + " already exists.");
+            }
+        }
         eBookList.add(eBook);
         System.out.println("\n===============NEW E-BOOK===============");
         System.out.println("Category type: " + eBook.getType());
@@ -20,9 +26,8 @@ public class DigitalLibraryServiceImpl implements DigitalLibraryService {
         System.out.println("File Size: " + eBook.getFileSize());
         System.out.println("Format: " + eBook.getFormat());
         System.out.println("========================================");
-
-
     }
+
 
 
     public void deleteEBook(int isbn) {

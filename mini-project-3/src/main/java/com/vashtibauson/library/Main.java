@@ -1,9 +1,10 @@
-package org.stratpoint.project2.vbauson;
-import org.stratpoint.project2.vbauson.exception.InvalidInputTypeException;
-import org.stratpoint.project2.vbauson.model.Book;
-import org.stratpoint.project2.vbauson.model.EBook;
-import org.stratpoint.project2.vbauson.service.Impl.DigitalLibraryServiceImpl;
-import org.stratpoint.project2.vbauson.service.Impl.LibraryServiceImpl;
+package com.vashtibauson.library;
+import com.vashtibauson.library.exception.DuplicateISBNException;
+import com.vashtibauson.library.exception.InvalidInputTypeException;
+import com.vashtibauson.library.model.Book;
+import com.vashtibauson.library.model.EBook;
+import com.vashtibauson.library.service.Impl.DigitalLibraryServiceImpl;
+import com.vashtibauson.library.service.Impl.LibraryServiceImpl;
 
 import java.util.Scanner;
 
@@ -28,8 +29,12 @@ public class Main {
 
                 if (option == 'A') {
                     Book book = typePrint.getBookDetails();
-                    libraryServiceImpl.addBook(book);
-
+                    try {
+                        libraryServiceImpl.addBook(book);
+                    } catch (DuplicateISBNException e) {
+                        System.out.println("Error: " + e.getMessage());
+                        continue; // Prompt the user again
+                    }
 
                 } else if (option == 'B') {
                     System.out.println("Remove a Book: ");
@@ -56,8 +61,12 @@ public class Main {
                 char eOption = typePrint.actionMenuPrint("E-Book");
 
                 if (eOption == 'A') {
-                    EBook eBook = typePrint.getEBookDetails();
-                    digitalLibraryServiceImpl.addEBook(eBook);
+                    try {
+                        EBook eBook = typePrint.getEBookDetails();
+                        digitalLibraryServiceImpl.addEBook(eBook);
+                    } catch (DuplicateISBNException e) {
+                        System.out.println("Error: " + e.getMessage());
+                    }
 
                 } else if (eOption == 'B') {
                     System.out.println("Remove an E-Book: ");

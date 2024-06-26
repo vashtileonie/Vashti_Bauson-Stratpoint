@@ -1,4 +1,4 @@
-package org.stratpoint.project2.vbauson.model;
+package com.vashtibauson.library.model;
 
 abstract class Category {
 

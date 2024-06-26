@@ -1,6 +1,7 @@
-package org.stratpoint.project2.vbauson.service.Impl;
-import org.stratpoint.project2.vbauson.model.Book;
-import org.stratpoint.project2.vbauson.service.LibraryService;
+package com.vashtibauson.library.service.Impl;
+import com.vashtibauson.library.exception.DuplicateISBNException;
+import com.vashtibauson.library.model.Book;
+import com.vashtibauson.library.service.LibraryService;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -10,13 +11,17 @@ public class LibraryServiceImpl implements LibraryService {
     List<Book> bookList = new ArrayList<Book>();
 
     @Override
-    public void addBook(Book book){
+    public void addBook(Book book) throws DuplicateISBNException {
+        for (Book existingBook : bookList) {
+            if (existingBook.getIsbn() == book.getIsbn()) {
+                throw new DuplicateISBNException("ISBN " + book.getIsbn() + " already exists.");
+            }
+        }
         bookList.add(book);
         System.out.println("\nCategory type: " + book.getType());
         System.out.println("\nBook added: " + book.getTitle());
         System.out.println("Written by " + book.getAuthor());
         System.out.println("ISBN: " + book.getIsbn());
-
     }
 
     @Override

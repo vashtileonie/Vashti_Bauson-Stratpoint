@@ -1,6 +1,6 @@
-package org.stratpoint.project2.vbauson.model;
+package com.vashtibauson.library.model;
 
-import org.stratpoint.project2.vbauson.model.Category;
+import com.vashtibauson.library.model.Category;
 
 public class EBook extends Category {
     private String title, author;

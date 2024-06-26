@@ -1,7 +1,7 @@
-package org.stratpoint.project2.vbauson;
-import org.stratpoint.project2.vbauson.exception.InvalidInputTypeException;
-import org.stratpoint.project2.vbauson.model.Book;
-import org.stratpoint.project2.vbauson.model.EBook;
+package com.vashtibauson.library;
+import com.vashtibauson.library.exception.InvalidInputTypeException;
+import com.vashtibauson.library.model.Book;
+import com.vashtibauson.library.model.EBook;
 
 import java.util.Scanner;
 
