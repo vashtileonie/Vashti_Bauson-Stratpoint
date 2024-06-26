@@ -33,7 +33,7 @@ public class Main {
                         libraryServiceImpl.addBook(book);
                     } catch (DuplicateISBNException e) {
                         System.out.println("Error: " + e.getMessage());
-                        continue; // Prompt the user again
+                        //continue; // Prompt the user again
                     }
 
                 } else if (option == 'B') {
