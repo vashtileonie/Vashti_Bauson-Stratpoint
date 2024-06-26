@@ -1,9 +1,12 @@
-package org.stratpoint.project2.vbauson;
+package org.stratpoint.project2.vbauson.service.Impl;
+import org.stratpoint.project2.vbauson.model.Book;
+import org.stratpoint.project2.vbauson.service.LibraryService;
+
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public class Library implements LibraryInterface{
+public class LibraryServiceImpl implements LibraryService {
     List<Book> bookList = new ArrayList<Book>();
 
     @Override
@@ -35,8 +38,8 @@ public class Library implements LibraryInterface{
     @Override
     public void searchBook(String title){
         for (Book book : bookList) {
-            if (book.getTitle().equalsIgnoreCase(title)) {
-                System.out.println("\nBook titled " + title + "found!");
+            if (book.getTitle().toLowerCase().contains(title.toLowerCase())) {
+                System.out.println("\nBook titled " + book.getTitle() + "found!");
                 return;
             }
         }

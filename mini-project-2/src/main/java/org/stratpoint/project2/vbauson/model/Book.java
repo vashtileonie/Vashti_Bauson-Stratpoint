@@ -1,6 +1,8 @@
-package org.stratpoint.project2.vbauson;
+package org.stratpoint.project2.vbauson.model;
 
-class Book extends Category {
+import org.stratpoint.project2.vbauson.model.Category;
+
+public class Book extends Category {
     private String title, author;
     private int isbn;
 

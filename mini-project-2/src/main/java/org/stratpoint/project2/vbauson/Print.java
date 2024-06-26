@@ -1,4 +1,8 @@
 package org.stratpoint.project2.vbauson;
+import org.stratpoint.project2.vbauson.exception.InvalidInputTypeException;
+import org.stratpoint.project2.vbauson.model.Book;
+import org.stratpoint.project2.vbauson.model.EBook;
+
 import java.util.Scanner;
 
 public class Print {
@@ -19,16 +23,15 @@ public class Print {
 
 
         if (scanner.hasNextInt()) {
-            int itemType = scanner.nextInt();
-            scanner.nextLine();  // Consume newline
-            return itemType;
+            //scanner.nextLine();  // Consume newline
+            return scanner.nextInt();
         } else {
             scanner.nextLine();  // Consume the invalid input
             throw new InvalidInputTypeException("Invalid input type. Please enter a number.");
         }
     }
     public char actionMenuPrint(String itemType) throws InvalidInputTypeException{
-        System.out.println("\n=============================================");
+        System.out.println("\n=================WELCOME==================");
         System.out.println("Hello! Choose your desired action: ");
         System.out.println("A- Add a new " + itemType.toLowerCase());
         System.out.println("B- Remove an existing " + itemType.toLowerCase());

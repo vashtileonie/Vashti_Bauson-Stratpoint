@@ -1,4 +1,10 @@
 package org.stratpoint.project2.vbauson;
+import org.stratpoint.project2.vbauson.exception.InvalidInputTypeException;
+import org.stratpoint.project2.vbauson.model.Book;
+import org.stratpoint.project2.vbauson.model.EBook;
+import org.stratpoint.project2.vbauson.service.Impl.DigitalLibraryServiceImpl;
+import org.stratpoint.project2.vbauson.service.Impl.LibraryServiceImpl;
+
 import java.util.Scanner;
 
 public class Main {
@@ -6,10 +12,9 @@ public class Main {
 
     public static void main(String[] args) {
 
-
         Scanner scanner = new Scanner(System.in);
-        Library library = new Library();
-        DigitalLibrary digitalLibrary= new DigitalLibrary();
+        LibraryServiceImpl libraryServiceImpl = new LibraryServiceImpl();
+        DigitalLibraryServiceImpl digitalLibraryServiceImpl = new DigitalLibraryServiceImpl();
 
         Print typePrint = new Print(scanner);
         try {
@@ -23,7 +28,7 @@ public class Main {
 
                 if (option == 'A') {
                     Book book = typePrint.getBookDetails();
-                    library.addBook(book);
+                    libraryServiceImpl.addBook(book);
 
 
                 } else if (option == 'B') {
@@ -32,13 +37,13 @@ public class Main {
                     int isbn = scanner.nextInt();
                     scanner.nextLine();  // Consume newline
 
-                    library.deleteBook(isbn);
+                    libraryServiceImpl.deleteBook(isbn);
 
                 } else if (option == 'C') {
                     System.out.println("Search for a Book: ");
                     System.out.print("Enter the title: ");
                     String title = scanner.nextLine();
-                    library.searchBook(title);
+                    libraryServiceImpl.searchBook(title);
 
                 } else if (option == 'D') {
                     System.out.println("Goodbye!");
@@ -51,22 +56,8 @@ public class Main {
                 char eOption = typePrint.actionMenuPrint("E-Book");
 
                 if (eOption == 'A') {
-                    String type = "E-Book";
-                    System.out.println("Add an E-Book: ");
-                    System.out.print("Enter the title: ");
-                    String title = scanner.nextLine();
-                    System.out.print("Enter Author: ");
-                    String author = scanner.nextLine();
-                    System.out.print("Enter ISBN: ");
-                    int isbn = scanner.nextInt();
-                    System.out.print("Enter file size (mb): ");
-                    double fileSize = scanner.nextDouble();
-                    scanner.nextLine();  // Consume newline
-                    System.out.print("Enter file format: ");
-                    String format = scanner.nextLine();
-
-
-                    digitalLibrary.addEBook(type, title, author, isbn, fileSize, format);
+                    EBook eBook = typePrint.getEBookDetails();
+                    digitalLibraryServiceImpl.addEBook(eBook);
 
                 } else if (eOption == 'B') {
                     System.out.println("Remove an E-Book: ");
@@ -74,13 +65,13 @@ public class Main {
                     int isbn = scanner.nextInt();
                     scanner.nextLine();  // Consume newline
 
-                    digitalLibrary.deleteEBook(isbn);
+                    digitalLibraryServiceImpl.deleteEBook(isbn);
 
                 } else if (eOption == 'C') {
                     System.out.println("Search for an E-Book: ");
                     System.out.print("Enter the title: ");
                     String title = scanner.nextLine();
-                    digitalLibrary.searchEBook(title);
+                    digitalLibraryServiceImpl.searchEBook(title);
 
                 } else if (eOption == 'D') {
                     System.out.println("Goodbye!");

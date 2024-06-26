@@ -1,4 +1,4 @@
-package org.stratpoint.project2.vbauson;
+package org.stratpoint.project2.vbauson.model;
 
 abstract class Category {
 
