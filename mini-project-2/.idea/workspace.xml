@@ -5,20 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bc340f24-e68e-4c2f-9413-e5e9efd9d076" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/Vashti_Bauson-Stratpoint.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Book.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Library.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mini-project-1/target/classes/org/example/Calculator.class" beforeDir="false" afterPath="$PROJECT_DIR$/../mini-project-1/target/classes/org/example/Calculator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/stratpoint.project2.vbauson/Book.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/stratpoint.project2.vbauson/Category.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/stratpoint.project2.vbauson/DigitalLibrary.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/stratpoint.project2.vbauson/EBook.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/stratpoint.project2.vbauson/InvalidInputTypeException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/stratpoint.project2.vbauson/Library.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/stratpoint.project2.vbauson/LibraryInterface.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/stratpoint.project2.vbauson/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stratpoint.project2.vbauson/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/stratpoint.project2.vbauson/Print.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stratpoint.project2.vbauson/Print.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/stratpoint/project2/vbauson/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/stratpoint/project2/vbauson/Print.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/stratpoint/project2/vbauson/exception/InvalidInputTypeException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stratpoint.project2.vbauson/exception/InvalidInputTypeException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/stratpoint/project2/vbauson/model/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stratpoint.project2.vbauson/model/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/stratpoint/project2/vbauson/model/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stratpoint.project2.vbauson/model/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/stratpoint/project2/vbauson/model/EBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stratpoint.project2.vbauson/model/EBook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/stratpoint/project2/vbauson/service/DigitalLibraryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stratpoint.project2.vbauson/service/DigitalLibraryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/stratpoint/project2/vbauson/service/Impl/DigitalLibraryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stratpoint.project2.vbauson/service/Impl/DigitalLibraryServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/stratpoint/project2/vbauson/service/Impl/LibraryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stratpoint.project2.vbauson/service/Impl/LibraryServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/stratpoint/project2/vbauson/service/LibraryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/stratpoint.project2.vbauson/service/LibraryService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,34 +40,37 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "vashtileonie"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;vashtileonie&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/vashtileonie/Vashti_Bauson-Stratpoint.git",
-    "accountId": "8beff190-9c4c-4e50-94a4-b344e710ef08"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/vashtileonie/Vashti_Bauson-Stratpoint.git&quot;,
+    &quot;accountId&quot;: &quot;8beff190-9c4c-4e50-94a4-b344e710ef08&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2iKYLcVYB98ykA3BqUxd9kIXkXW" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -73,5 +81,16 @@
       <updated>1719240683430</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
