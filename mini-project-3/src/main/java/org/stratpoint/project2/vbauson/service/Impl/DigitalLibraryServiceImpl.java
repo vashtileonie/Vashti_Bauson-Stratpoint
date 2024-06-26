@@ -52,9 +52,9 @@ public class DigitalLibraryServiceImpl implements DigitalLibraryService {
                 return;
             }
         }
-        System.out.println("\n=================ERROR=================");
+        System.out.println("\n=================SEARCH: ERROR=================");
         System.out.println("E-Book with title " + title + " not found.");
-        System.out.print("=======================================");
+        System.out.print("===========================================");
 
     }
     }

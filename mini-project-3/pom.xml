@@ -24,7 +24,6 @@
                 <configuration>
                     <archive>
                         <manifest>
-
                             <mainClass>org.stratpoint.project2.vbauson.Main</mainClass>
                         </manifest>
                     </archive>
