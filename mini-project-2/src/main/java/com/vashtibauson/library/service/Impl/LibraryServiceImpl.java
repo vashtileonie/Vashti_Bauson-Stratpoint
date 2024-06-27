@@ -7,12 +7,18 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-// Implementation of the LibraryService interface
+/**
+ * Implementation of the LibraryService interface for managing Books.
+ */
 public class LibraryServiceImpl implements LibraryService {
     // List to store Book objects
-    List<Book> bookList = new ArrayList<Book>();
+    List<Book> bookList = new ArrayList<>();
 
-    // Method to add a new book to the list
+    /**
+     * Adds a new Book to the library.
+     *
+     * @param book The Book object to be added
+     */
     @Override
     public void addBook(Book book) {
         // Add the book to the list
@@ -26,7 +32,11 @@ public class LibraryServiceImpl implements LibraryService {
         System.out.println("========================================");
     }
 
-    // Method to delete a book from the list by ISBN
+    /**
+     * Deletes a Book from the library by ISBN.
+     *
+     * @param isbn The ISBN of the Book to be deleted
+     */
     @Override
     public void deleteBook(int isbn) {
         // Create an iterator for the book list
@@ -44,6 +54,7 @@ public class LibraryServiceImpl implements LibraryService {
                 // Print book removal details
                 System.out.println("\n===========REMOVE BOOK===============");
                 System.out.println("Book removed: " + item.getTitle());
+                System.out.println("ISBN: " + item.getIsbn());
                 System.out.println("=======================================");
                 found = true;
                 break;
@@ -51,7 +62,11 @@ public class LibraryServiceImpl implements LibraryService {
         }
     }
 
-    // Method to search for a book by title
+    /**
+     * Searches for a Book in the library by title.
+     *
+     * @param title The title of the Book to search for
+     */
     @Override
     public void searchBook(String title) {
         // Iterate through the book list
@@ -68,6 +83,6 @@ public class LibraryServiceImpl implements LibraryService {
         // Print error message if the book is not found
         System.out.println("\n=================SEARCH: ERROR=================");
         System.out.println("Book with title '" + title + "' not found.");
-        System.out.print("===========================================");
+        System.out.println("===========================================");
     }
 }

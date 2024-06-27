@@ -6,21 +6,34 @@ import com.vashtibauson.library.model.EBook;
 
 import java.util.Scanner;
 
+/**
+ * Utility class for printing menus and obtaining user input for a library management system.
+ */
 public class Print {
     // Scanner object for user input
     private Scanner scanner;
 
-    // Constructor to initialize the scanner
+    /**
+     * Constructor to initialize the Print object with a Scanner for user input.
+     *
+     * @param scanner Scanner object for user input
+     */
     public Print(Scanner scanner) {
         this.scanner = scanner;
     }
 
-    // Method to print item type selection menu and get the user's choice
+    /**
+     * Displays the item type selection menu and retrieves the user's choice.
+     *
+     * @return Integer representing the chosen item type (1 for Book, 2 for E-Book)
+     * @throws InvalidInputTypeException If the user input is not a valid integer
+     */
     public int itemTypePrint() throws InvalidInputTypeException {
         System.out.println("---------------------------------------------");
         System.out.println("What is your desired item?: ");
         System.out.println("1- Book");
         System.out.println("2- Ebook");
+        System.out.println("3- Quit");
         System.out.println("---------------------------------------------");
         System.out.print("Type of item: ");
 
@@ -33,7 +46,13 @@ public class Print {
         }
     }
 
-    // Method to print action menu and get the user's choice
+    /**
+     * Displays the action menu based on the item type and retrieves the user's choice.
+     *
+     * @param itemType Type of item (Book or E-Book) for which the action menu is displayed
+     * @return Character representing the chosen action (A, B, C, D)
+     * @throws InvalidInputTypeException If the user input is not a valid character
+     */
     public char actionMenuPrint(String itemType) throws InvalidInputTypeException {
         System.out.println("\n=================WELCOME==================");
         System.out.println("Hello! Choose your desired action: ");
@@ -56,7 +75,12 @@ public class Print {
     }
 
 
-    // Method to get details for a new book from the user
+    /**
+     * Prompts the user for details to create a new Book object.
+     *
+     * @return Book object created with user-provided details
+     * @throws InvalidInputTypeException If the user input for ISBN is not a valid integer
+     */
     public Book getBookDetails() throws InvalidInputTypeException {
         String type = "Book";
         System.out.println("Add a Book: ");
@@ -77,7 +101,12 @@ public class Print {
         }
     }
 
-    // Method to get details for a new eBook from the user
+    /**
+     * Prompts the user for details to create a new EBook object.
+     *
+     * @return EBook object created with user-provided details
+     * @throws InvalidInputTypeException If the user input for ISBN, file size, or file format is invalid
+     */
     public EBook getEBookDetails() throws InvalidInputTypeException {
         String type = "E-Book";
         System.out.println("Add an E-Book: ");

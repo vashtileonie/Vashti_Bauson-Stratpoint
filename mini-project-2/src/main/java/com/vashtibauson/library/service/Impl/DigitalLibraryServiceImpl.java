@@ -7,13 +7,19 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-// Implementation of the DigitalLibraryService interface
+/**
+ * Implementation of the DigitalLibraryService interface for managing E-Books.
+ */
 public class DigitalLibraryServiceImpl implements DigitalLibraryService {
     // List to store EBook objects
-    List<EBook> eBookList = new ArrayList<EBook>();
+    List<EBook> eBookList = new ArrayList<>();
 
-    // Method to add a new eBook to the list
-    public void addEBook(EBook eBook){
+    /**
+     * Adds a new E-Book to the library.
+     *
+     * @param eBook The EBook object to be added
+     */
+    public void addEBook(EBook eBook) {
         // Add the eBook to the list
         eBookList.add(eBook);
         // Print eBook details
@@ -27,7 +33,11 @@ public class DigitalLibraryServiceImpl implements DigitalLibraryService {
         System.out.println("========================================");
     }
 
-    // Method to delete an eBook from the list by ISBN
+    /**
+     * Deletes an E-Book from the library by ISBN.
+     *
+     * @param isbn The ISBN of the EBook to be deleted
+     */
     public void deleteEBook(int isbn) {
         // Create an iterator for the eBook list
         Iterator<EBook> itr = eBookList.iterator();
@@ -44,6 +54,7 @@ public class DigitalLibraryServiceImpl implements DigitalLibraryService {
                 // Print eBook removal details
                 System.out.println("\n===========REMOVE E-BOOK===============");
                 System.out.println("E-Book removed: " + item.getTitle());
+                System.out.println("ISBN: " + item.getIsbn());
                 System.out.println("=======================================");
                 found = true;
                 break;
@@ -51,7 +62,11 @@ public class DigitalLibraryServiceImpl implements DigitalLibraryService {
         }
     }
 
-    // Method to search for an eBook by title
+    /**
+     * Searches for an E-Book in the library by title.
+     *
+     * @param title The title of the EBook to search for
+     */
     public void searchEBook(String title) {
         // Iterate through the eBook list
         for (EBook eBook : eBookList) {
@@ -67,6 +82,6 @@ public class DigitalLibraryServiceImpl implements DigitalLibraryService {
         // Print error message if eBook is not found
         System.out.println("\n=================SEARCH: ERROR=================");
         System.out.println("E-Book with title " + title + " not found.");
-        System.out.print("===========================================");
+        System.out.println("===========================================");
     }
 }
