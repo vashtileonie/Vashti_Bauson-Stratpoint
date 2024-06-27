@@ -15,6 +15,12 @@ mvn clean install
  java -jar target/mini-project-2-1.0.1.jar 
 ```
 
+## How to Test
+
+```bash
+ mvn test 
+```
+
 ---
 
 ### Author
