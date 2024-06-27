@@ -1,5 +1,4 @@
 package com.vashtibauson.library;
-import com.vashtibauson.library.exception.DuplicateISBNException;
 import com.vashtibauson.library.exception.InvalidInputTypeException;
 import com.vashtibauson.library.model.Book;
 import com.vashtibauson.library.model.EBook;
@@ -28,12 +27,7 @@ public class Main {
 
                 if (option == 'A') {
                     Book book = typePrint.getBookDetails();
-                    try {
-                        libraryServiceImpl.addBook(book);
-                    } catch (DuplicateISBNException e) {
-                        System.out.println("Error: " + e.getMessage());
-                        //continue; // Prompt the user again
-                    }
+                    libraryServiceImpl.addBook(book);
 
                 } else if (option == 'B') {
                     System.out.println("Remove a Book: ");
@@ -60,12 +54,8 @@ public class Main {
                 char eOption = typePrint.actionMenuPrint("E-Book");
 
                 if (eOption == 'A') {
-                    try {
-                        EBook eBook = typePrint.getEBookDetails();
-                        digitalLibraryServiceImpl.addEBook(eBook);
-                    } catch (DuplicateISBNException e) {
-                        System.out.println("Error: " + e.getMessage());
-                    }
+                    EBook eBook = typePrint.getEBookDetails();
+                    digitalLibraryServiceImpl.addEBook(eBook);
 
                 } else if (eOption == 'B') {
                     System.out.println("Remove an E-Book: ");

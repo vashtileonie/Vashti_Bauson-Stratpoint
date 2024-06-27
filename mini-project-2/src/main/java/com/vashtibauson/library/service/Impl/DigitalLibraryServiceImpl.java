@@ -1,5 +1,4 @@
 package com.vashtibauson.library.service.Impl;
-import com.vashtibauson.library.exception.DuplicateISBNException;
 import com.vashtibauson.library.model.EBook;
 import com.vashtibauson.library.service.DigitalLibraryService;
 
@@ -11,12 +10,7 @@ public class DigitalLibraryServiceImpl implements DigitalLibraryService {
     List<EBook> eBookList = new ArrayList<EBook>();
 
 
-    public void addEBook(EBook eBook) throws DuplicateISBNException {
-        for (EBook existingEBook : eBookList) {
-            if (existingEBook.getIsbn() == eBook.getIsbn()) {
-                throw new DuplicateISBNException("ISBN " + eBook.getIsbn() + " already exists.");
-            }
-        }
+    public void addEBook(EBook eBook){
         eBookList.add(eBook);
         System.out.println("\n===============NEW E-BOOK===============");
         System.out.println("Category type: " + eBook.getType());

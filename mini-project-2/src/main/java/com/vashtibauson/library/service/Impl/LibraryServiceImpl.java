@@ -1,5 +1,4 @@
 package com.vashtibauson.library.service.Impl;
-import com.vashtibauson.library.exception.DuplicateISBNException;
 import com.vashtibauson.library.model.Book;
 import com.vashtibauson.library.service.LibraryService;
 
@@ -11,17 +10,15 @@ public class LibraryServiceImpl implements LibraryService {
     List<Book> bookList = new ArrayList<Book>();
 
     @Override
-    public void addBook(Book book) throws DuplicateISBNException {
-        for (Book existingBook : bookList) {
-            if (existingBook.getIsbn() == book.getIsbn()) {
-                throw new DuplicateISBNException("ISBN " + book.getIsbn() + " already exists.");
-            }
-        }
+    public void addBook(Book book) {
+
         bookList.add(book);
-        System.out.println("\nCategory type: " + book.getType());
-        System.out.println("\nBook added: " + book.getTitle());
+        System.out.println("\n===============NEW BOOK===============");
+        System.out.println("Category type: " + book.getType());
+        System.out.println("Book added: " + book.getTitle());
         System.out.println("Written by " + book.getAuthor());
         System.out.println("ISBN: " + book.getIsbn());
+        System.out.println("========================================");
     }
 
     @Override
@@ -33,7 +30,9 @@ public class LibraryServiceImpl implements LibraryService {
             Book item = itr.next();
             if (item.getIsbn() == isbn) {
                 itr.remove();
-                System.out.println("\nBook removed: " + item.getTitle());
+                System.out.println("\n===========REMOVE BOOK===============");
+                System.out.println("Book removed: " + item.getTitle());
+                System.out.println("=======================================");
                 found = true;
                 break;
             }
@@ -44,10 +43,14 @@ public class LibraryServiceImpl implements LibraryService {
     public void searchBook(String title){
         for (Book book : bookList) {
             if (book.getTitle().toLowerCase().contains(title.toLowerCase())) {
-                System.out.println("\nBook titled " + book.getTitle() + "found!");
+                System.out.println("\n===========SEARCH BY TITLE===============");
+                System.out.println("Book titled " + book.getTitle() + " found!");
+                System.out.println("=======================================");
                 return;
             }
         }
-        System.out.println("\nBook with title '" + title + "' not found.");
+        System.out.println("\n=================SEARCH: ERROR=================");
+        System.out.println("Book with title '" + title + "' not found.");
+        System.out.print("===========================================");
     }
 }

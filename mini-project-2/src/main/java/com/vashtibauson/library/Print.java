@@ -21,7 +21,6 @@ public class Print {
         System.out.println("---------------------------------------------");
         System.out.print("Type of item: ");
 
-
         if (scanner.hasNextInt()) {
             //scanner.nextLine();  // Consume newline
             return scanner.nextInt();
