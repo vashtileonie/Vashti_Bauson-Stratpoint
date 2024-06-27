@@ -1,6 +1,6 @@
 # Mini Project 2
 ---
-Simple book library system that incorporates the 3 OOP principles: Inheritance, Encapsulation, and Polymorphism.
+A simple book library system that incorporates the 3 OOP principles: Inheritance, Encapsulation, and Polymorphism. It handles two different book types: E-Books and Physical Books.
 
 
 ## How to Build
