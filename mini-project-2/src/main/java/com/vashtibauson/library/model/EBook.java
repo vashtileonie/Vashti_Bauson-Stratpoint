@@ -18,6 +18,7 @@ public class EBook extends Category {
         this.format = format;
     }
 
+    //getters and setters
     public String getTitle() {
         return title;
     }
