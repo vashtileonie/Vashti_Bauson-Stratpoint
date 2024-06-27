@@ -48,12 +48,13 @@ public class Print {
         if (scanner.hasNext()) {
             char option = scanner.next().charAt(0);
             scanner.nextLine();  // Consume newline
-            return option;
+            return Character.toUpperCase(option);
         } else {
             scanner.nextLine();  // Consume the invalid input
             throw new InvalidInputTypeException("Invalid input type. Please enter a character.");
         }
     }
+
 
     // Method to get details for a new book from the user
     public Book getBookDetails() throws InvalidInputTypeException {
