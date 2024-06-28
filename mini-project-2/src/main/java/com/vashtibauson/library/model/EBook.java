@@ -119,4 +119,12 @@ public class EBook extends Category {
     public void setFormat(String format) {
         this.format = format;
     }
+
+    /**
+     * Prints the type of the E-Book.
+     */
+    @Override
+    public void printType() {
+        System.out.println("This is an E-Book.");
+    }
 }

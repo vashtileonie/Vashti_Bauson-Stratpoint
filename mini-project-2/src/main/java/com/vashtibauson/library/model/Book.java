@@ -67,4 +67,12 @@ public class Book extends Category {
     public String getTitle() {
         return title;
     }
+
+    /**
+     * Prints the type of the book.
+     */
+    @Override
+    public void printType() {
+        System.out.println("This is a Book.");
+    }
 }

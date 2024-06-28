@@ -106,7 +106,7 @@ public class Main {
                     } else { // Invalid choice
                         System.out.println("Invalid choice");
                     }
-                }else if (itemType == 3){
+                } else if (itemType == 3){
                     System.out.println("Goodbye!");
                     logger.info("Terminated");
                     break;

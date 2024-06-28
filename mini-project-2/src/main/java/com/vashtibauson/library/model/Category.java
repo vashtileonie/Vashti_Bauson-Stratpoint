@@ -14,6 +14,7 @@ public abstract class Category {
      */
     public Category(String type) {
         this.type = type;
+        printType(); // Print the type when a category is created
     }
 
     /**
@@ -23,5 +24,12 @@ public abstract class Category {
      */
     public String getType() {
         return type;
+    }
+
+    /**
+     * Prints the type of the category.
+     */
+    public void printType() {
+        System.out.println("Type: " + type);
     }
 }

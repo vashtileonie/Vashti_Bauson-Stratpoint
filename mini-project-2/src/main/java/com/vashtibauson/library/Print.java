@@ -74,7 +74,6 @@ public class Print {
         }
     }
 
-
     /**
      * Prompts the user for details to create a new Book object.
      *
@@ -144,4 +143,5 @@ public class Print {
         // Create and return a new EBook object with the provided details
         return new EBook(type, title, author, isbn, fileSize, format);
     }
+
 }
