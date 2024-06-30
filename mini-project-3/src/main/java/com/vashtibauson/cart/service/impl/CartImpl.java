@@ -16,7 +16,7 @@ import java.util.Locale;
  * Implementation of the Cart service that manages a collection of products.
  */
 public class CartImpl implements Cart {
-   // private static final Logger logger = LoggerFactory.getLogger(CartImpl.class);
+    private static final Logger logger = LoggerFactory.getLogger(CartImpl.class);
 
     // Attribute: list to store products in the cart
     private final List<Product> items;
@@ -38,7 +38,7 @@ public class CartImpl implements Cart {
         // Print confirmation message to console
         System.out.println("Added " + product.getName() + " to the cart.");
         // Log the addition of an item
-      //  logger.info("Item Added");
+       logger.info("Item Added");
     }
 
     /**
@@ -49,7 +49,7 @@ public class CartImpl implements Cart {
             // Print message if cart is empty
             System.out.println("The cart is empty.");
             // Log that the cart is empty
-          //  logger.info("Cart is empty.");
+            logger.info("Cart is empty.");
             return;
         }
         // Print heading for cart items
@@ -62,7 +62,7 @@ public class CartImpl implements Cart {
         for (Product item : items) {
             System.out.printf("- %s: PHP%s%n", item.getName(), formatter.format(item.getPrice()));
             // Log that the cart is displayed
-         //   logger.info("Cart is displayed.");
+            //logger.info("Cart is displayed.");
         }
     }
 

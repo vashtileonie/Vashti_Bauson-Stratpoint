@@ -14,9 +14,21 @@ import java.util.Scanner;
 
 /**
  * Main class to demonstrate a shopping cart application.
+ * This application allows users to browse a catalog of products,
+ * add selected products to a cart, view the cart contents, and calculate
+ * the total price of items in the cart.
  */
 public class Main {
     private static final Logger logger = LoggerFactory.getLogger(Main.class);
+
+    /**
+     * Default constructor.
+     * This constructor is not typically used directly in the application logic.
+     * The main application logic resides in the main method {@link #main(String[])}.
+     */
+    public Main() {
+        // Default constructor
+    }
 
     /**
      * Main method to start the shopping cart application.
