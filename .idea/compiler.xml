@@ -11,5 +11,8 @@
         <module name="basicCalculator" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="mini-project-4" target="22" />
+    </bytecodeTargetLevel>
   </component>
 </project>

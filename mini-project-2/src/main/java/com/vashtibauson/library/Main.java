@@ -19,7 +19,7 @@ public class Main {
     private static final Logger logger = LoggerFactory.getLogger(Main.class);
 
     /**
-     * Main method to start the library management application.
+     * Main model to start the library management application.
      *
      * @param args Command-line arguments (not used)
      */

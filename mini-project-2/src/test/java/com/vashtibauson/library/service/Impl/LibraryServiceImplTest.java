@@ -13,13 +13,13 @@ class LibraryServiceImplTest {
     // Instance of the class being tested
     private LibraryServiceImpl libraryService;
 
-    // Setup method to initialize objects before each test
+    // Setup model to initialize objects before each test
     @BeforeEach
     public void setUp() {
         libraryService = new LibraryServiceImpl();
     }
 
-    // Test method for adding a book
+    // Test model for adding a book
     @Test
     void addBook() {
         // Create a new Book object
@@ -38,7 +38,7 @@ class LibraryServiceImplTest {
         logger.info("Checking book Title: {}", libraryService.bookList.get(0).getTitle());
     }
 
-    // Test method for deleting a book
+    // Test model for deleting a book
     @Test
     void deleteBook() {
         // Create a new Book object
@@ -56,7 +56,7 @@ class LibraryServiceImplTest {
         assertEquals(0, libraryService.bookList.size());
     }
 
-    // Test method for searching a book by title
+    // Test model for searching a book by title
     @Test
     void searchBook() {
         // Create a new Book object

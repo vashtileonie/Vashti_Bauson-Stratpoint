@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.vashtibauson.cart.service.impl.CartImplTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.054 s -- in com.vashtibauson.cart.service.impl.CartImplTest

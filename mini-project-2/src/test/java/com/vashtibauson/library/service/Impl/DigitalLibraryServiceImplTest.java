@@ -14,14 +14,14 @@ class DigitalLibraryServiceImplTest {
     // Instance of the class being tested
     private DigitalLibraryServiceImpl digitalLibraryService;
 
-    // Setup method to initialize objects before each test
+    // Setup model to initialize objects before each test
     @BeforeEach
     void setUp() {
         digitalLibraryService = new DigitalLibraryServiceImpl();
         logger.info("Setting completed.");
     }
 
-    // Test method for adding an eBook
+    // Test model for adding an eBook
     @Test
     void addEBook() {
         // Create a new EBook object
@@ -41,7 +41,7 @@ class DigitalLibraryServiceImplTest {
         
     }
 
-    // Test method for deleting an eBook
+    // Test model for deleting an eBook
     @Test
     void deleteEBook() {
         // Create a new EBook object
@@ -57,7 +57,7 @@ class DigitalLibraryServiceImplTest {
         assertEquals(0, digitalLibraryService.eBookList.size());
     }
 
-    // Test method for searching an eBook by title
+    // Test model for searching an eBook by title
     @Test
     void searchEBook() {
         // Create a new EBook object
