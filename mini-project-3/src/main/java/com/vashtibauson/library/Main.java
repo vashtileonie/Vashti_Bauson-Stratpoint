@@ -1,9 +1,10 @@
 package com.vashtibauson.library;
 
 import com.vashtibauson.library.model.Product;
-import com.vashtibauson.library.service.CartImpl;
+import com.vashtibauson.library.service.Cart;
 import com.vashtibauson.library.service.ProductList;
-
+import com.vashtibauson.library.service.Impl.CartImpl;
+import com.vashtibauson.library.service.Impl.ProductListImpl;
 import java.util.List;
 import java.util.Scanner;
 
@@ -12,19 +13,23 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         // Create a product catalog
-        ProductList list = new ProductList();
+        ProductList productList = new ProductListImpl();
 
         // Display the product catalog
-        list.displayProducts();
+        productList.displayProducts();
 
         // Create a cart
-        CartImpl cart = new CartImpl();
+        Cart cart = new CartImpl();
 
         // Add products to the cart based on user input
-        List<Product> products = list.getProducts();
+        List<Product> products = productList.getProducts();
 
         while (true) {
-            System.out.println("Enter the number of the product to add to the cart (0 to finish):");
+            System.out.println("Enter the number of the product to add to the cart (0 to exit the cart:");
+            while (!scanner.hasNextInt()) {
+                System.out.println("Invalid input. Please enter a number:");
+                scanner.next(); // Clear invalid input
+            }
             int choice = scanner.nextInt();
 
             if (choice == 0) {

@@ -1,11 +1,12 @@
-package com.vashtibauson.library.service;
+package com.vashtibauson.library.service.Impl;
 
 import com.vashtibauson.library.model.Product;
+import com.vashtibauson.library.service.Cart;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class CartImpl {
+public class CartImpl implements Cart {
     // Attribute: list to store products
     private List<Product> items;
 
@@ -43,4 +44,11 @@ public class CartImpl {
         // Print the total price
         System.out.println("Total price: PHP" + total);
     }
+
+    @Override
+    public List<Product> getItems() {
+        return items; // Implement the method to return the list of items
+    }
+
+
 }
