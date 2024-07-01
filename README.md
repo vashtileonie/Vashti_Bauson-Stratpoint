@@ -7,6 +7,12 @@
 mvn clean install
 ```
 
+## How to Compile
+
+```bash
+mvn compile
+```
+
 ## How to Run
 
 ```bash
@@ -62,12 +68,17 @@ A simple book library system that incorporates OOP principles. It handles two di
 - The `Category` class is abstract and defines common properties and methods for its subclasses.
 - `Category` provides a common interface for `Book` and `EBook`.
 
-## Setup and Usage
 
-**Clone the repository:**
-   ```bash
-   git clone https://github.com/vashtibauson/library-management-system.git
-   cd library-management-system
+# Mini Project 3
+---
+# Simple E-Commerce Cart System
+This project is a simple e-commerce cart system implemented in Java. It allows users to add products to a shopping cart, view the cart items, and calculate the total price of the items in the cart. The project uses the Java Collections Framework, Generics, and Lambda Expressions.
+
+## Features
+
+- Add Product to Cart: Add products with a name and price to the shopping cart.
+- View Cart Items: Display the list of items with their names and formatted prices in the cart.
+- Calculate Total Price: Calculate and display the total price of the items in the cart.
 
 
 ---
