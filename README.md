@@ -1,7 +1,5 @@
-# Mini Project 2
+# Maven
 ---
-A simple book library system that incorporates OOP principles. It handles two different book types: E-Books and Physical Books.
-
 
 ## How to Build
 
@@ -18,7 +16,7 @@ mvn clean install
 ## How to Test
 
 ```bash
- mvn test 
+ mvn clean test 
 ```
 
 ## How to View Javadoc
@@ -28,8 +26,11 @@ After building the project, you can view the generated Javadoc for the library s
 Path:
 ```bash
 mini-project-2/docs/index.html
-```
 
+```
+# Mini Project 2
+---
+A simple book library system that incorporates OOP principles. It handles two different book types: E-Books and Physical Books.
 ---
 
 ### Author
