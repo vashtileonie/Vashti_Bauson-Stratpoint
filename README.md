@@ -30,7 +30,46 @@ mini-project-2/docs/index.html
 ```
 # Mini Project 2
 ---
-A simple book library system that incorporates OOP principles. It handles two different book types: E-Books and Physical Books.
+# Library Management System
+A simple book library system that incorporates OOP principles. It handles two different book types: E-Books and Physical Books. The Library Management System is a simple Java application that allows users to manage a collection of books and e-books. Users can add, delete, and search for books and e-books. The application also demonstrates the use of the four pillars of Object-Oriented Programming (OOP): Encapsulation, Inheritance, Polymorphism, and Abstraction.
+
+## Features
+
+- Add a new Book or E-Book to the library.
+- Delete an existing Book or E-Book from the library.
+- Search for a Book or E-Book by title.
+- User-friendly console interface.
+
+## OOP Concepts
+
+### Encapsulation
+
+- Each class encapsulates its data and methods, exposing only the necessary interfaces.
+-  The `Book` and `EBook` classes encapsulate details like title, author, ISBN, etc.
+
+### Inheritance
+
+- The `Book` and `EBook` classes inherit from the `Category` class, demonstrating the use of inheritance.
+- `Book` and `EBook` extend `Category` and inherit its properties and methods.
+
+### Polymorphism
+
+- The `Category` class has an abstract method `printType()`, which is overridden by `Book` and `EBook`.
+- The `printType()` method is implemented differently in `Book` and `EBook`.
+
+### Abstraction
+
+- The `Category` class is abstract and defines common properties and methods for its subclasses.
+- `Category` provides a common interface for `Book` and `EBook`.
+
+## Setup and Usage
+
+**Clone the repository:**
+   ```bash
+   git clone https://github.com/vashtibauson/library-management-system.git
+   cd library-management-system
+
+
 ---
 
 ### Author
